@@ -1,6 +1,5 @@
 #Password Generator Project
 import random
-from random import shuffle
 
 letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
@@ -29,7 +28,7 @@ for num in range(0, nr_numbers):
 #e.g. 4 letter, 2 symbol, 2 number = g^2jk8&P
 
 passlist = list(easy_password)
-shuffle(passlist)
+random.shuffle(passlist)
 hard_password = ''.join(passlist)
 
 print(hard_password)
